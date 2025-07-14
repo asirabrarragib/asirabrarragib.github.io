@@ -8,12 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #e5dfdb;
-      --dark: #13110e;
+      --bg: #fff;
+      --dark: #191917;
       --muted: #8b8681;
-      --card-bg: #f7f6f3;
+      --card-bg: #f5f5f5;
       --card-radius: 20px;
       --primary: #191917;
+      --shadow: 0 2px 16px rgba(0,0,0,0.07);
     }
     body {
       background: var(--bg);
@@ -25,18 +26,19 @@
       min-height: 100vh;
     }
     .container {
-      max-width: 1200px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 48px 24px 0 24px;
+      padding: 48px 18px 0 18px;
     }
     /* Header/Hero */
     .hero {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      min-height: 78vh;
+      min-height: 60vh;
       gap: 40px;
       flex-wrap: wrap;
+      margin-bottom: 40px;
     }
     .hero-text {
       flex: 1 1 380px;
@@ -53,16 +55,16 @@
       color: var(--primary);
     }
     .hero-title {
-      font-size: 3.6rem;
+      font-size: 3.1rem;
       font-weight: 800;
       line-height: 1.08;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       letter-spacing: -0.03em;
     }
     .hero-desc {
       color: var(--muted);
       font-size: 1.13rem;
-      margin-bottom: 38px;
+      margin-bottom: 34px;
       max-width: 380px;
     }
     .hero-btn {
@@ -76,7 +78,7 @@
       text-decoration: none;
       transition: background 0.15s;
       border: none;
-      margin-bottom: 38px;
+      margin-bottom: 28px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     }
     .hero-btn:hover {
@@ -84,105 +86,72 @@
     }
     .hero-footer {
       color: var(--muted);
-      font-size: 1.05rem;
-      margin-top: 20px;
-    }
-    .hero-img {
-      flex: 0 0 360px;
-      max-width: 390px;
-      align-self: center;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 4px 22px rgba(0,0,0,0.11);
-      background: #ccc;
-      height: 420px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .hero-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 24px;
+      font-size: 1.04rem;
+      margin-top: 14px;
     }
     /* Portfolio/Projects Section */
     .section-title {
-      font-size: 2.1rem;
+      font-size: 2rem;
       font-weight: 700;
-      margin: 82px 0 26px 0;
+      margin: 58px 0 18px 0;
       color: var(--primary);
       letter-spacing: -0.02em;
     }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
       margin-bottom: 54px;
     }
-    .portfolio-card {
+    .project-card {
       background: var(--card-bg);
       border-radius: var(--card-radius);
-      overflow: hidden;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.10);
+      box-shadow: var(--shadow);
+      padding: 32px 30px 22px 30px;
       display: flex;
       flex-direction: column;
-      min-height: 340px;
+      min-height: 120px;
     }
-    .portfolio-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: var(--card-radius) var(--card-radius) 0 0;
-      background: #d4d0cb;
-    }
-    .portfolio-content {
-      padding: 24px 22px 18px 22px;
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .portfolio-meta {
-      font-size: .96rem;
+    .project-meta {
+      font-size: .98rem;
       color: var(--muted);
-      margin-bottom: 8px;
-      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+      letter-spacing: 0.01em;
+      font-weight: 600;
     }
-    .portfolio-title {
-      font-size: 1.24rem;
+    .project-title {
+      font-size: 1.23rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 9px;
       color: var(--primary);
     }
-    .portfolio-desc {
+    .project-desc {
       font-size: 1.06rem;
       color: #333;
-      flex: 1 1 auto;
     }
-    .portfolio-btn {
-      margin-top: 18px;
-      font-size: .97rem;
+    .project-btn {
+      margin-top: 12px;
+      font-size: .98rem;
       font-weight: 600;
       color: #191917;
-      background: #e5dfdb;
-      border: 2px solid #d3cdc8;
-      padding: 8px 26px;
+      background: #ececec;
+      border: 2px solid #ddd;
+      padding: 7px 23px;
       border-radius: 25px;
       text-decoration: none;
       display: inline-block;
       align-self: flex-start;
       transition: background 0.14s;
     }
-    .portfolio-btn:hover {
-      background: #dedad5;
+    .project-btn:hover {
+      background: #dfdfdf;
     }
     footer {
       color: var(--muted);
       font-size: 1rem;
       text-align: left;
       margin: 68px 0 28px 0;
-      border-top: 1px solid #cec9c5;
+      border-top: 1px solid #eee;
       padding-top: 32px;
       display: flex;
       justify-content: space-between;
@@ -193,15 +162,11 @@
       font-weight: 700;
       font-size: 1.09rem;
     }
-    @media (max-width: 960px) {
-      .hero {flex-direction: column;}
-      .hero-img {max-width: 100%; height: 280px;}
-    }
     @media (max-width: 600px) {
-      .hero-title {font-size: 2.1rem;}
+      .hero-title {font-size: 2rem;}
       .container {padding: 22px 7px 0 7px;}
-      .portfolio-content {padding: 14px 10px 14px 10px;}
-      .section-title {font-size: 1.4rem;}
+      .project-card {padding: 17px 8px 17px 13px;}
+      .section-title {font-size: 1.22rem;}
     }
   </style>
 </head>
@@ -212,52 +177,66 @@
     <div class="hero">
       <div class="hero-text">
         <div class="hero-logo">Asir Abrar<sup style="font-size:.55em;">®</sup></div>
-        <div class="hero-desc" style="margin-bottom:24px;">
+        <div class="hero-desc" style="margin-bottom:22px;">
           Welcome! I’m Asir Abrar, a researcher and Ph.D. student specializing in cognitive workload assessment, deep learning, and multimodal brain-computer interfaces. My work blends neuroscience, data science, and artificial intelligence to unlock new insights into human cognition.
         </div>
         <div class="hero-title">Asir Abrar</div>
-        <a href="#portfolio" class="hero-btn">View portfolio ↓</a>
+        <a href="#projects" class="hero-btn">View Projects ↓</a>
         <div class="hero-footer">From Rolla, Missouri, USA 🇺🇸</div>
-      </div>
-      <div class="hero-img">
-        <!-- Replace src below with your own image if desired -->
-        <img src="d6e55105-20a0-43d0-ac31-5eab9827f476.png" alt="Asir Abrar photo">
       </div>
     </div>
 
-    <!-- PORTFOLIO/PROJECTS -->
-    <div id="portfolio">
+    <!-- PROJECTS -->
+    <div id="projects">
       <div class="section-title">Featured Research & Projects</div>
-      <div class="portfolio-grid">
+      <div class="projects-list">
 
-        <div class="portfolio-card">
-          <img class="portfolio-img" src="d28ca9b9-9510-4047-92f2-554c79aeda26.png" alt="Project image 1">
-          <div class="portfolio-content">
-            <div class="portfolio-meta">Cognitive Workload | EEG, HRV | 2025</div>
-            <div class="portfolio-title">Real-Time Cognitive Workload Assessment with Deep Learning</div>
-            <div class="portfolio-desc">Developed novel spiking neural networks to classify mental workload using multimodal data (EEG, HRV), advancing real-time brain-computer interface research.</div>
-            <a href="#" class="portfolio-btn">View details</a>
-          </div>
+        <div class="project-card">
+          <div class="project-meta">Cognitive Workload &middot; EEG, HRV &middot; 2025</div>
+          <div class="project-title">Real-Time Cognitive Workload Assessment with Deep Learning</div>
+          <div class="project-desc">Developed novel spiking neural networks to classify mental workload using multimodal data (EEG, HRV), advancing real-time brain-computer interface research.</div>
         </div>
 
-        <div class="portfolio-card">
-          <img class="portfolio-img" src="bf4fc988-09b0-49fa-a032-8ad4e194acb9.png" alt="Project image 2">
-          <div class="portfolio-content">
-            <div class="portfolio-meta">NLP | Dementia Detection | 2024</div>
-            <div class="portfolio-title">Early Detection of Dementia Using Language Analysis</div>
-            <div class="portfolio-desc">Applied NLP, machine learning, and behavioral analysis on patient speech data to improve early detection of dementia, with feature selection and classifier development.</div>
-            <a href="#" class="portfolio-btn">View details</a>
-          </div>
+        <div class="project-card">
+          <div class="project-meta">NLP &middot; Dementia Detection &middot; 2024</div>
+          <div class="project-title">Early Detection of Dementia Using Language Analysis</div>
+          <div class="project-desc">Applied NLP, machine learning, and behavioral analysis on patient speech data to improve early detection of dementia, with feature selection and classifier development.</div>
         </div>
 
-        <div class="portfolio-card">
-          <img class="portfolio-img" src="1ff385cd-6f95-4176-ba36-edcc6bef0319.png" alt="Project image 3">
-          <div class="portfolio-content">
-            <div class="portfolio-meta">Assistive Tech | Deep Learning | 2023</div>
-            <div class="portfolio-title">Smart Assistive Aids for the Visually Impaired</div>
-            <div class="portfolio-desc">Surveyed deep learning visual aids, proposed new architectures, and compared computer vision models (e.g., YOLO) for accessibility solutions.</div>
-            <a href="#" class="portfolio-btn">View details</a>
-          </div>
+        <div class="project-card">
+          <div class="project-meta">Assistive Tech &middot; Deep Learning &middot; 2023</div>
+          <div class="project-title">Smart Assistive Aids for the Visually Impaired</div>
+          <div class="project-desc">Surveyed deep learning visual aids, proposed new architectures, and compared computer vision models (e.g., YOLO) for accessibility solutions.</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-meta">ML &middot; Bioinformatics &middot; 2022</div>
+          <div class="project-title">Age Prediction of Abalone from Physical Measurements</div>
+          <div class="project-desc">Used feature engineering and classification models to accurately predict the age of abalone from measurable features.</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-meta">EHR &middot; Deep Learning &middot; 2022</div>
+          <div class="project-title">Patient Severity Classification with EHR Data</div>
+          <div class="project-desc">Developed and benchmarked ML models for classifying patient severity states from large electronic health record datasets.</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-meta">Network Programming &middot; 2021</div>
+          <div class="project-title">Multi-Threaded Chat Room Service</div>
+          <div class="project-desc">Built a robust chat application using socket programming for scalable real-time communication.</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-meta">IoT &middot; Embedded Systems &middot; 2020</div>
+          <div class="project-title">Smart Billboard for Smoke Detection</div>
+          <div class="project-desc">Designed a smoke-detecting billboard using Arduino UNO and gas sensors (MQ-8), enabling environmental monitoring in public spaces.</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-meta">Image Processing &middot; Embedded Systems &middot; 2019</div>
+          <div class="project-title">Automated Traffic Monitoring System</div>
+          <div class="project-desc">Created a real-time traffic monitoring system using Arduino, machine vision, and OCR for vehicle detection and recognition.</div>
         </div>
 
       </div>
