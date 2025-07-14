@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asir Abrar | Personal Website</title>
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/yourgithubid" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f9f9fb;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    header {
+      background: #0067b8;
+      color: #fff;
+      padding: 2rem 1rem 1.5rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: .5rem 0 0;
+      font-size: 1.2rem;
+      opacity: .92;
+    }
+    nav {
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1.1rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: border-bottom 0.2s;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+      border-bottom: 2px solid #fff;
+    }
+    section {
+      max-width: 850px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem 2rem 1.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 16px rgba(0,0,0,0.07);
+    }
+    h2 {
+      color: #0067b8;
+      margin-top: 0;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    ul {
+      padding-left: 1.3rem;
+    }
+    li {
+      margin-bottom: .55rem;
+    }
+    .edu-item, .exp-item {
+      margin-bottom: 1.1rem;
+    }
+    .role {
+      font-weight: bold;
+      color: #444;
+    }
+    .year, .place {
+      color: #666;
+      font-size: .98rem;
+      font-style: italic;
+      margin-left: 0.5em;
+    }
+    .contact-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    .contact-list li {
+      margin-bottom: 0.4em;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 0.5em 2em;
+    }
+    @media (max-width: 700px) {
+      section {padding: 1.2rem;}
+      header h1 {font-size: 2rem;}
+      h2 {font-size: 1.2rem;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Asir Abrar</h1>
+  <p>Ph.D. Student in Computer Science | Missouri S&T</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Hello! I’m Asir Abrar, a Ph.D. student in Computer Science at Missouri University of Science & Technology. My research focuses on cognitive workload assessment using deep learning and multimodal data, including EEG and heart rate. I have a background in health informatics, NLP, image processing, and software engineering, with experience in both academic and industry settings.
+  </p>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="edu-item">
+    <strong>Missouri University of Science & Technology</strong> <span class="year">Ph.D. in Computer Science (Expected 2030)</span><br>
+    <span class="place">Rolla, Missouri</span><br>
+    Research Interest: Cognitive Workload Assessment
+  </div>
+  <div class="edu-item">
+    <strong>Lamar University</strong> <span class="year">MS in Computer Science, 2024</span><br>
+    <span class="place">Beaumont, Texas</span><br>
+    GPA: 4.00 | Research: NLP, Health Informatics
+  </div>
+  <div class="edu-item">
+    <strong>BRAC University</strong> <span class="year">BSc in Computer Science & Engineering, 2018</span><br>
+    <span class="place">Dhaka, Bangladesh</span><br>
+    GPA: 3.01 | Research: Image Processing, Pattern Recognition
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research & Thesis</h2>
+  <ul>
+    <li><strong>Cognitive Workload Assessment:</strong> Developing convolutional spiking neural networks (CSNNs) for classifying cognitive workload using EEG and heart rate variability data.</li>
+    <li><strong>Linguistic Feature Exploration for Alzheimer’s Detection:</strong> Applying statistical tests and machine learning for feature selection and dementia classification from patient conversations.</li>
+    <li><strong>Survey:</strong> Early-Stage Dementia Detection using NLP and multimodal datasets.</li>
+    <li><strong>Survey (ICISDM 2023):</strong> Deep Learning-based Smart Assistive Aids for the Visually Impaired (YOLO and related algorithms).</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>Feature engineering & classification to predict abalone age from physical measurements</li>
+    <li>Severity classification of patients using EHR data with ML and deep learning</li>
+    <li>Multi-threaded chat room service (network programming)</li>
+    <li>Smart billboard for smoke detection (Arduino UNO, MQ-8)</li>
+    <li>Automated traffic monitoring (image processing, Arduino, OCR)</li>
+  </ul>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+  <div class="exp-item">
+    <span class="role">Research Assistant</span>, Lamar University (Oct 2022 – Present)
+    <ul>
+      <li>Analyzing dementia patient transcripts and pattern identification</li>
+      <li>Guided undergraduate research, co-authored papers</li>
+    </ul>
+  </div>
+  <div class="exp-item">
+    <span class="role">Teaching Assistant</span>, Lamar University (May 2023 – Present)
+    <ul>
+      <li>Assisted in: Distributed Systems, Cloud Computing, Data Science, and more</li>
+    </ul>
+  </div>
+  <div class="exp-item">
+    <span class="role">Programmer Analyst</span>, Dcastalia Limited (Dec 2018 – Dec 2020)
+    <ul>
+      <li>Led project planning, scheduling, and team communication</li>
+      <li>Developed websites and LMS solutions</li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div>
+      <strong>Languages:</strong><br>
+      Python, Java, C, C++, CLAN
+    </div>
+    <div>
+      <strong>ML/AI:</strong><br>
+      Pandas, Numpy, Matplotlib, Keras, Sklearn, TensorFlow, OpenCV, PyLangAcq, etc.
+    </div>
+    <div>
+      <strong>Tools:</strong><br>
+      Git, Linux, Arduino, LaTeX
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <ul class="contact-list">
+    <li><strong>Email:</strong> <a href="mailto:asirabrarragib17@gmail.com">asirabrarragib17@gmail.com</a></li>
+    <li><strong>Location:</strong> Rolla, MO, USA</li>
+    <li><strong>Phone:</strong> (945) 217-2798</li>
+    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/asirabrarragib/" target="_blank">asirabrarragib</a></li>
+    <li><strong>GitHub:</strong> <a href="https://github.com/asirabrarragib" target="_blank">asirabrarragib</a></li>
+  </ul>
+</section>
+
+<footer style="text-align:center; margin:2rem 0; color:#aaa; font-size:.97rem;">
+  &copy; 2025 Asir Abrar | Built with &hearts; | <a href="mailto:asirabrarragib17@gmail.com" style="color:#0067b8">Contact Me</a>
+</footer>
+
+</body>
+</html>
 
