@@ -3,225 +3,274 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Asir Abrar | Personal Website</title>
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/yourgithubid" />
+  <title>Asir Abrar | Cognitive Workload Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #e5dfdb;
+      --dark: #13110e;
+      --muted: #8b8681;
+      --card-bg: #f7f6f3;
+      --card-radius: 20px;
+      --primary: #191917;
+    }
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f9f9fb;
-      color: #222;
+      background: var(--bg);
+      color: var(--primary);
+      font-family: 'Inter', Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.7;
+      min-height: 100vh;
     }
-    header {
-      background: #0067b8;
-      color: #fff;
-      padding: 2rem 1rem 1.5rem 1rem;
-      text-align: center;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px 0 24px;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.6rem;
+    /* Header/Hero */
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      min-height: 78vh;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-text {
+      flex: 1 1 380px;
+      max-width: 540px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-logo {
       font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 36px;
+      color: var(--primary);
     }
-    header p {
-      margin: .5rem 0 0;
-      font-size: 1.2rem;
-      opacity: .92;
+    .hero-title {
+      font-size: 3.6rem;
+      font-weight: 800;
+      line-height: 1.08;
+      margin-bottom: 32px;
+      letter-spacing: -0.03em;
     }
-    nav {
-      margin-top: 1.2rem;
-      margin-bottom: 0.5rem;
+    .hero-desc {
+      color: var(--muted);
+      font-size: 1.13rem;
+      margin-bottom: 38px;
+      max-width: 380px;
     }
-    nav a {
-      color: #fff;
-      margin: 0 1.1rem;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      transition: border-bottom 0.2s;
-      border-bottom: 2px solid transparent;
-    }
-    nav a:hover {
-      border-bottom: 2px solid #fff;
-    }
-    section {
-      max-width: 850px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem 2rem 1.5rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 3px 16px rgba(0,0,0,0.07);
-    }
-    h2 {
-      color: #0067b8;
-      margin-top: 0;
-      font-size: 1.5rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
+    .hero-btn {
+      display: inline-block;
+      font-size: 1.1rem;
       font-weight: 600;
+      padding: 14px 38px;
+      background: #191917;
+      color: #fff;
+      border-radius: 32px;
+      text-decoration: none;
+      transition: background 0.15s;
+      border: none;
+      margin-bottom: 38px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     }
-    ul {
-      padding-left: 1.3rem;
+    .hero-btn:hover {
+      background: #44423e;
     }
-    li {
-      margin-bottom: .55rem;
+    .hero-footer {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-top: 20px;
     }
-    .edu-item, .exp-item {
-      margin-bottom: 1.1rem;
+    .hero-img {
+      flex: 0 0 360px;
+      max-width: 390px;
+      align-self: center;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 22px rgba(0,0,0,0.11);
+      background: #ccc;
+      height: 420px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .role {
-      font-weight: bold;
-      color: #444;
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
     }
-    .year, .place {
-      color: #666;
-      font-size: .98rem;
-      font-style: italic;
-      margin-left: 0.5em;
+    /* Portfolio/Projects Section */
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin: 82px 0 26px 0;
+      color: var(--primary);
+      letter-spacing: -0.02em;
     }
-    .contact-list {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 0;
-    }
-    .contact-list li {
-      margin-bottom: 0.4em;
-    }
-    .skills-grid {
+    .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 0.5em 2em;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-bottom: 54px;
     }
-    @media (max-width: 700px) {
-      section {padding: 1.2rem;}
-      header h1 {font-size: 2rem;}
-      h2 {font-size: 1.2rem;}
+    .portfolio-card {
+      background: var(--card-bg);
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.10);
+      display: flex;
+      flex-direction: column;
+      min-height: 340px;
+    }
+    .portfolio-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: var(--card-radius) var(--card-radius) 0 0;
+      background: #d4d0cb;
+    }
+    .portfolio-content {
+      padding: 24px 22px 18px 22px;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .portfolio-meta {
+      font-size: .96rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+    .portfolio-title {
+      font-size: 1.24rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    .portfolio-desc {
+      font-size: 1.06rem;
+      color: #333;
+      flex: 1 1 auto;
+    }
+    .portfolio-btn {
+      margin-top: 18px;
+      font-size: .97rem;
+      font-weight: 600;
+      color: #191917;
+      background: #e5dfdb;
+      border: 2px solid #d3cdc8;
+      padding: 8px 26px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      align-self: flex-start;
+      transition: background 0.14s;
+    }
+    .portfolio-btn:hover {
+      background: #dedad5;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 1rem;
+      text-align: left;
+      margin: 68px 0 28px 0;
+      border-top: 1px solid #cec9c5;
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      font-weight: 700;
+      font-size: 1.09rem;
+    }
+    @media (max-width: 960px) {
+      .hero {flex-direction: column;}
+      .hero-img {max-width: 100%; height: 280px;}
+    }
+    @media (max-width: 600px) {
+      .hero-title {font-size: 2.1rem;}
+      .container {padding: 22px 7px 0 7px;}
+      .portfolio-content {padding: 14px 10px 14px 10px;}
+      .section-title {font-size: 1.4rem;}
     }
   </style>
 </head>
 <body>
+  <div class="container">
 
-<header>
-  <h1>Asir Abrar</h1>
-  <p>Ph.D. Student in Computer Science | Missouri S&T</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section id="about">
-  <h2>About</h2>
-  <p>
-    Hello! I’m Asir Abrar, a Ph.D. student in Computer Science at Missouri University of Science & Technology. My research focuses on cognitive workload assessment using deep learning and multimodal data, including EEG and heart rate. I have a background in health informatics, NLP, image processing, and software engineering, with experience in both academic and industry settings.
-  </p>
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-  <div class="edu-item">
-    <strong>Missouri University of Science & Technology</strong> <span class="year">Ph.D. in Computer Science (Expected 2030)</span><br>
-    <span class="place">Rolla, Missouri</span><br>
-    Research Interest: Cognitive Workload Assessment
-  </div>
-  <div class="edu-item">
-    <strong>Lamar University</strong> <span class="year">MS in Computer Science, 2024</span><br>
-    <span class="place">Beaumont, Texas</span><br>
-    GPA: 4.00 | Research: NLP, Health Informatics
-  </div>
-  <div class="edu-item">
-    <strong>BRAC University</strong> <span class="year">BSc in Computer Science & Engineering, 2018</span><br>
-    <span class="place">Dhaka, Bangladesh</span><br>
-    GPA: 3.01 | Research: Image Processing, Pattern Recognition
-  </div>
-</section>
-
-<section id="research">
-  <h2>Research & Thesis</h2>
-  <ul>
-    <li><strong>Cognitive Workload Assessment:</strong> Developing convolutional spiking neural networks (CSNNs) for classifying cognitive workload using EEG and heart rate variability data.</li>
-    <li><strong>Linguistic Feature Exploration for Alzheimer’s Detection:</strong> Applying statistical tests and machine learning for feature selection and dementia classification from patient conversations.</li>
-    <li><strong>Survey:</strong> Early-Stage Dementia Detection using NLP and multimodal datasets.</li>
-    <li><strong>Survey (ICISDM 2023):</strong> Deep Learning-based Smart Assistive Aids for the Visually Impaired (YOLO and related algorithms).</li>
-  </ul>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <ul>
-    <li>Feature engineering & classification to predict abalone age from physical measurements</li>
-    <li>Severity classification of patients using EHR data with ML and deep learning</li>
-    <li>Multi-threaded chat room service (network programming)</li>
-    <li>Smart billboard for smoke detection (Arduino UNO, MQ-8)</li>
-    <li>Automated traffic monitoring (image processing, Arduino, OCR)</li>
-  </ul>
-</section>
-
-<section id="experience">
-  <h2>Professional Experience</h2>
-  <div class="exp-item">
-    <span class="role">Research Assistant</span>, Lamar University (Oct 2022 – Present)
-    <ul>
-      <li>Analyzing dementia patient transcripts and pattern identification</li>
-      <li>Guided undergraduate research, co-authored papers</li>
-    </ul>
-  </div>
-  <div class="exp-item">
-    <span class="role">Teaching Assistant</span>, Lamar University (May 2023 – Present)
-    <ul>
-      <li>Assisted in: Distributed Systems, Cloud Computing, Data Science, and more</li>
-    </ul>
-  </div>
-  <div class="exp-item">
-    <span class="role">Programmer Analyst</span>, Dcastalia Limited (Dec 2018 – Dec 2020)
-    <ul>
-      <li>Led project planning, scheduling, and team communication</li>
-      <li>Developed websites and LMS solutions</li>
-    </ul>
-  </div>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div>
-      <strong>Languages:</strong><br>
-      Python, Java, C, C++, CLAN
+    <!-- HERO SECTION -->
+    <div class="hero">
+      <div class="hero-text">
+        <div class="hero-logo">Asir Abrar<sup style="font-size:.55em;">®</sup></div>
+        <div class="hero-desc" style="margin-bottom:24px;">
+          Welcome! I’m Asir Abrar, a researcher and Ph.D. student specializing in cognitive workload assessment, deep learning, and multimodal brain-computer interfaces. My work blends neuroscience, data science, and artificial intelligence to unlock new insights into human cognition.
+        </div>
+        <div class="hero-title">Asir Abrar</div>
+        <a href="#portfolio" class="hero-btn">View portfolio ↓</a>
+        <div class="hero-footer">From Rolla, Missouri, USA 🇺🇸</div>
+      </div>
+      <div class="hero-img">
+        <!-- Replace src below with your own image if desired -->
+        <img src="d6e55105-20a0-43d0-ac31-5eab9827f476.png" alt="Asir Abrar photo">
+      </div>
     </div>
-    <div>
-      <strong>ML/AI:</strong><br>
-      Pandas, Numpy, Matplotlib, Keras, Sklearn, TensorFlow, OpenCV, PyLangAcq, etc.
+
+    <!-- PORTFOLIO/PROJECTS -->
+    <div id="portfolio">
+      <div class="section-title">Featured Research & Projects</div>
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+          <img class="portfolio-img" src="d28ca9b9-9510-4047-92f2-554c79aeda26.png" alt="Project image 1">
+          <div class="portfolio-content">
+            <div class="portfolio-meta">Cognitive Workload | EEG, HRV | 2025</div>
+            <div class="portfolio-title">Real-Time Cognitive Workload Assessment with Deep Learning</div>
+            <div class="portfolio-desc">Developed novel spiking neural networks to classify mental workload using multimodal data (EEG, HRV), advancing real-time brain-computer interface research.</div>
+            <a href="#" class="portfolio-btn">View details</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img class="portfolio-img" src="bf4fc988-09b0-49fa-a032-8ad4e194acb9.png" alt="Project image 2">
+          <div class="portfolio-content">
+            <div class="portfolio-meta">NLP | Dementia Detection | 2024</div>
+            <div class="portfolio-title">Early Detection of Dementia Using Language Analysis</div>
+            <div class="portfolio-desc">Applied NLP, machine learning, and behavioral analysis on patient speech data to improve early detection of dementia, with feature selection and classifier development.</div>
+            <a href="#" class="portfolio-btn">View details</a>
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <img class="portfolio-img" src="1ff385cd-6f95-4176-ba36-edcc6bef0319.png" alt="Project image 3">
+          <div class="portfolio-content">
+            <div class="portfolio-meta">Assistive Tech | Deep Learning | 2023</div>
+            <div class="portfolio-title">Smart Assistive Aids for the Visually Impaired</div>
+            <div class="portfolio-desc">Surveyed deep learning visual aids, proposed new architectures, and compared computer vision models (e.g., YOLO) for accessibility solutions.</div>
+            <a href="#" class="portfolio-btn">View details</a>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div>
-      <strong>Tools:</strong><br>
-      Git, Linux, Arduino, LaTeX
-    </div>
+
+    <footer>
+      <div class="footer-brand">Asir Abrar<sup style="font-size:.7em;">®</sup></div>
+      <div>
+        <span style="margin-right:18px;">&copy; 2025</span>
+        <a href="mailto:asirabrarragib17@gmail.com" style="color:#13110e;text-decoration:underline;margin-right:16px;">Contact</a>
+        <a href="https://github.com/asirabrarragib" target="_blank" style="color:#13110e;text-decoration:underline;">GitHub</a>
+      </div>
+    </footer>
   </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <ul class="contact-list">
-    <li><strong>Email:</strong> <a href="mailto:asirabrarragib17@gmail.com">asirabrarragib17@gmail.com</a></li>
-    <li><strong>Location:</strong> Rolla, MO, USA</li>
-    <li><strong>Phone:</strong> (945) 217-2798</li>
-    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/asirabrarragib/" target="_blank">asirabrarragib</a></li>
-    <li><strong>GitHub:</strong> <a href="https://github.com/asirabrarragib" target="_blank">asirabrarragib</a></li>
-  </ul>
-</section>
-
-<footer style="text-align:center; margin:2rem 0; color:#aaa; font-size:.97rem;">
-  &copy; 2025 Asir Abrar | Built with &hearts; | <a href="mailto:asirabrarragib17@gmail.com" style="color:#0067b8">Contact Me</a>
-</footer>
-
 </body>
 </html>
-
