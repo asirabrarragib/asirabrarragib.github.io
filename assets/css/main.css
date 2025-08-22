@@ -634,9 +634,10 @@ section,
 }
 
 .hero-text p {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.8;
   color: var(--default-color);
+  font-weight: 400;
 }
 
 .hero-img-circle {
@@ -806,6 +807,7 @@ section,
   padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 2px solid var(--accent-color);
+
 }
 
 .education .education-item::before {
@@ -822,7 +824,7 @@ section,
 .education .education-item h4 {
   line-height: 20px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 10px;
@@ -842,6 +844,7 @@ section,
   color: var(--default-color);
   margin: 0;
   font-family: inherit;
+  font-weight: 300;
 }
 
 .education .education-item ul {
@@ -851,6 +854,7 @@ section,
 
 .education .education-item ul li {
   padding-bottom: 10px;
+  font-weight: 300;
 }
 
 .education .section-title {
@@ -937,6 +941,7 @@ section,
   color: var(--default-color);
   margin: 0;
   font-family: inherit;
+  font-weight: 300;
 }
 
 .experience .experience-item ul {
@@ -946,6 +951,7 @@ section,
 
 .experience .experience-item ul li {
   padding-bottom: 10px;
+  font-weight: 300;
 }
 
 .experience .section-title {
@@ -993,6 +999,7 @@ section,
   color: var(--default-color);
   margin: 0;
   font-family: inherit;
+  font-weight: 300;
 }
 
 /*--------------------------------------------------------------
@@ -1024,9 +1031,10 @@ section,
 
 
 .paper .paper-simple .paper-entry p {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--default-color);
   margin: 0;
+  font-weight: 300;
 }
 
 /*--------------------------------------------------------------
@@ -1520,6 +1528,52 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
+}
+
+
+/* ===== Awards Section ===== */
+.award {
+  padding: 40px 0;
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+.award-title {
+  color: var(--heading-color);
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* Timeline container */
+.award-simple {
+  position: relative;
+  padding-left: 25px;
+}
+
+
+
+
+/* Each award item */
+.award-entry ul li {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Filled dot */
+.award-entry ul li::before {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: 7px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
 }
 
 /*--------------------------------------------------------------
